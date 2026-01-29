@@ -129,10 +129,10 @@ dataqualityagent/
 ## ⚙️ Setup (Mac / Linux)
 
 ### 1️⃣ Create virtual environment
-- bash
-- python3 -m venv .venv
-- source .venv/bin/activate
-- pip install -U pip
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip```
 
 ## 2️⃣ Install dependencies
 - pip install -e ".[dev]"
