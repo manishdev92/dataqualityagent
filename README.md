@@ -62,7 +62,7 @@ This mirrors how a real data engineer reasons about data quality.
 ---
 
 ## 🏗 High-level architecture
-
+```
 DuckDB (local warehouse)
         ↓
 Table Profiler
@@ -74,7 +74,7 @@ dbt Test Generator (schema.yml)
 Markdown DQ Report
         ↓
 FastAPI Service
-
+```
 
 ---
 
@@ -100,7 +100,7 @@ This lets you *see the system actually working*.
 ---
 
 ## 📁 Project structure
-
+```
 dataqualityagent/
 ├── scripts/
 │   ├── seed_warehouse.py      # creates baseline / bad_day data
@@ -121,7 +121,7 @@ dataqualityagent/
 ├── tests/                     # pytest unit + smoke tests
 ├── pyproject.toml
 └── README.md
-
+```
 
 
 ---
@@ -129,10 +129,10 @@ dataqualityagent/
 ## ⚙️ Setup (Mac / Linux)
 
 ### 1️⃣ Create virtual environment
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -U pip
+- bash
+- python3 -m venv .venv
+- source .venv/bin/activate
+- pip install -U pip
 
 ## 2️⃣ Install dependencies
 - pip install -e ".[dev]"
