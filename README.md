@@ -64,16 +64,17 @@ This mirrors how a real data engineer reasons about data quality.
 ## 🏗 High-level architecture
 
 DuckDB (local warehouse)
-↓
+        ↓
 Table Profiler
-↓
+        ↓
 Anomaly Detector (baseline vs today)
-↓
+        ↓
 dbt Test Generator (schema.yml)
-↓
+        ↓
 Markdown DQ Report
-↓
+        ↓
 FastAPI Service
+
 
 ---
 
@@ -102,25 +103,25 @@ This lets you *see the system actually working*.
 
 dataqualityagent/
 ├── scripts/
-│ ├── seed_warehouse.py # creates baseline / bad_day data
-│ └── run_dq.py # one-command end-to-end run
+│   ├── seed_warehouse.py      # creates baseline / bad_day data
+│   └── run_dq.py              # one-command end-to-end run
 │
 ├── src/dqa/
-│ ├── connectors/ # DuckDB connector
-│ ├── profiling/ # table profiling logic
-│ ├── anomaly/ # anomaly detection
-│ ├── dbtgen/ # dbt schema.yml generator
-│ ├── reporting/ # markdown report generator
-│ └── api/ # FastAPI service
+│   ├── connectors/            # DuckDB connector
+│   ├── profiling/             # table profiling logic
+│   ├── anomaly/               # anomaly detection rules
+│   ├── dbtgen/                # dbt schema.yml generator
+│   ├── reporting/             # markdown report generator
+│   └── api/                   # FastAPI service
 │
 ├── generated/
-│ ├── dbt/models/schema.yml # auto-generated dbt tests
-│ └── reports/ # DQ reports
+│   ├── dbt/models/schema.yml  # auto-generated dbt tests
+│   └── reports/               # DQ reports
 │
-├── tests/ # pytest unit + smoke tests
-├── .github/workflows/ci.yml # GitHub Actions CI
+├── tests/                     # pytest unit + smoke tests
 ├── pyproject.toml
 └── README.md
+
 
 
 ---
