@@ -133,148 +133,149 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -U pip
 
-2️⃣ Install dependencies
-pip install -e ".[dev]"
+## 2️⃣ Install dependencies
+- pip install -e ".[dev]"
 
-▶️ Run the system (one command)
-python scripts/run_dq.py --target bad_day
+## ▶️ Run the system (one command)
+- python scripts/run_dq.py --target bad_day
 
-What this command does
+## What this command does
 
-Seeds baseline data
+- Seeds baseline data
 
-Profiles baseline tables
+- Profiles baseline tables
 
-Seeds bad_day data
+- Seeds bad_day data
 
-Profiles current tables
+- Profiles current tables
 
-Detects anomalies
+- Detects anomalies
 
-Generates dbt tests
+- Generates dbt tests
 
-Writes a DQ report
+- Writes a DQ report
 
-📄 Outputs to check
-1️⃣ Generated dbt tests
-generated/dbt/models/schema.yml
+- 📄 Outputs to check
+
+## 1️⃣ Generated dbt tests
+- generated/dbt/models/schema.yml
 
 
-Example tests:
+## Example tests:
 
-unique
+- unique
 
-not_null
+- not_null
 
-relationships
+- relationships
 
-accepted_range
+- accepted_range
 
-2️⃣ Data Quality report
+## 2️⃣ Data Quality report
 generated/reports/run_<run_id>.md
 
 
-Contains:
+## Contains:
 
-findings grouped by table
+- findings grouped by table
 
-severity (CRITICAL / WARN)
+- severity (CRITICAL / WARN)
 
-evidence summary
+- evidence summary
 
-🌐 Run as an API (FastAPI)
-Start the service
-uvicorn dqa.api.main:app --reload --port 8000
+## 🌐 Run as an API (FastAPI)
+- Start the service
+- uvicorn dqa.api.main:app --reload --port 8000
 
-Open Swagger UI
-http://127.0.0.1:8000/docs
+## Open Swagger UI
+- http://127.0.0.1:8000/docs
 
-Run DQ via API
-curl -X POST "http://127.0.0.1:8000/dq/run?target=bad_day"
+## Run DQ via API
+- curl -X POST "http://127.0.0.1:8000/dq/run?target=bad_day"
 
-Fetch the report
-curl "http://127.0.0.1:8000/dq/report/<run_id>"
+## Fetch the report
+- curl "http://127.0.0.1:8000/dq/report/<run_id>"
 
-🧪 Tests
-pytest -q
+## 🧪 Tests
+- pytest -q
 
 
-Includes:
+## Includes:
 
-unit tests for anomaly logic
+- unit tests for anomaly logic
 
-smoke test for full pipeline
+- smoke test for full pipeline
 
-🔄 Continuous Integration (CI)
+- 🔄 Continuous Integration (CI)
 
-This project uses GitHub Actions for Continuous Integration.
+- This project uses GitHub Actions for Continuous Integration.
 
-What runs automatically
+## What runs automatically
 
-On every push or pull request to main:
+- On every push or pull request to main:
 
-Python 3.11 environment is created
+- Python 3.11 environment is created
 
-Project dependencies are installed
+- Project dependencies are installed
 
-All pytest unit and smoke tests are executed
+- All pytest unit and smoke tests are executed
 
-Why this matters
+## Why this matters
 
-Prevents broken code from being merged
+- Prevents broken code from being merged
 
-Ensures data quality logic stays correct
+- Ensures data quality logic stays correct
 
-Demonstrates production-grade engineering practices
+- Demonstrates production-grade engineering practices
 
-CI status is visible in the Actions tab of the repository.
+- CI status is visible in the Actions tab of the repository.
 
-🔁 How to reuse this in real projects
+## 🔁 How to reuse this in real projects
 
-You can extend this system to:
+- You can extend this system to:
 
-Postgres / Snowflake / BigQuery
+- Postgres / Snowflake / BigQuery
 
-Parquet / S3 / Delta Lake
+- Parquet / S3 / Delta Lake
 
-dbt CI pipelines
+- dbt CI pipelines
 
-Airflow / Dagster scheduled runs
+- Airflow / Dagster scheduled runs
 
-Only the connector layer needs to change.
+- Only the connector layer needs to change.
 
-🚀 Future enhancements
+## 🚀 Future enhancements
 
-Persist historical baselines (trend over time)
+- Persist historical baselines (trend over time)
 
-Smarter drift detection (MAD / robust z-score)
+- Smarter drift detection (MAD / robust z-score)
 
-LLM-based test recommendations
+- LLM-based test recommendations
 
-Data Quality score per table
+- Data Quality score per table
 
-Docker support
+- Docker support
 
-⭐ Why this project stands out
+## ⭐ Why this project stands out
 
-This is not a tutorial toy.
+- This is not a tutorial toy.
 
-It demonstrates:
+- It demonstrates:
 
-system design thinking
+- system design thinking
 
-real-world data issues
+- real-world data issues
 
-automation mindset
+- automation mindset
 
-clean Python engineering
+- clean Python engineering
 
-CI/CD awareness
+- CI/CD awareness
 
-Ideal for:
+## Ideal for:
 
-GitHub portfolio
+- GitHub portfolio
 
-interviews
+- interviews
 
-internal tooling inspiration
+- internal tooling inspiration
