@@ -1,0 +1,28 @@
+[project]
+name = "dataqualityagent"
+version = "0.1.0"
+description = "Local-first Agentic Data Quality Agent (DuckDB + dbt test generator)"
+requires-python = ">=3.11"
+dependencies = [
+  "duckdb>=0.10.3",
+  "pandas>=2.2.0",
+  "numpy>=1.26.0",
+  "pyyaml>=6.0.1",
+  "fastapi>=0.110.0",
+  "uvicorn>=0.27.0",
+  "python-multipart>=0.0.9"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.6.0"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

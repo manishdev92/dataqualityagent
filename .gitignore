@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+data/*.duckdb
+generated/reports/*
+generated/dbt/models/schema.yml
+.DS_Store

@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: dataqualityagent
+Version: 0.1.0
+Summary: Local-first Agentic Data Quality Agent (DuckDB + dbt test generator)
+Requires-Python: >=3.11
+Requires-Dist: duckdb>=0.10.3
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: uvicorn>=0.27.0
+Requires-Dist: python-multipart>=0.0.9
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: ruff>=0.6.0; extra == "dev"

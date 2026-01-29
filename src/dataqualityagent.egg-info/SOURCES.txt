@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/dataqualityagent.egg-info/PKG-INFO
+src/dataqualityagent.egg-info/SOURCES.txt
+src/dataqualityagent.egg-info/dependency_links.txt
+src/dataqualityagent.egg-info/requires.txt
+src/dataqualityagent.egg-info/top_level.txt
+src/dqa/__init__.py
+src/dqa/anomaly/__init__.py
+src/dqa/api/__init__.py
+src/dqa/connectors/__init__.py
+src/dqa/dbtgen/__init__.py
+src/dqa/profiling/__init__.py
+src/dqa/reporting/__init__.py
+src/dqa/utils/__init__.py
