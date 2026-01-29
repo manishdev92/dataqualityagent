@@ -137,12 +137,12 @@ pip install -U pip
 ```
 
 ## 2️⃣ Install dependencies
-- pip install -e ".[dev]"
+```pip install -e ".[dev]"```
 
 ## ▶️ Run the system (one command)
-- python scripts/run_dq.py --target bad_day
+```python scripts/run_dq.py --target bad_day```
 
-## What this command does
+### What this command does
 
 - Seeds baseline data
 
