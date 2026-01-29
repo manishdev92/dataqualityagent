@@ -186,19 +186,19 @@ generated/reports/run_<run_id>.md
 
 ## 🌐 Run as an API (FastAPI)
 - Start the service
-- uvicorn dqa.api.main:app --reload --port 8000
+```uvicorn dqa.api.main:app --reload --port 8000```
 
 ## Open Swagger UI
-- http://127.0.0.1:8000/docs
+```http://127.0.0.1:8000/docs```
 
 ## Run DQ via API
-- curl -X POST "http://127.0.0.1:8000/dq/run?target=bad_day"
+```curl -X POST "http://127.0.0.1:8000/dq/run?target=bad_day"```
 
 ## Fetch the report
-- curl "http://127.0.0.1:8000/dq/report/<run_id>"
+```curl "http://127.0.0.1:8000/dq/report/<run_id>"```
 
 ## 🧪 Tests
-- pytest -q
+```pytest -q```
 
 
 ## Includes:
